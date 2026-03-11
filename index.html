@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geheimnisse der DDR – Digitaler Escape Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="landing-page">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="site-logo">Geheimnisse der DDR<span class="logo-badge">ARCHIV</span></span>
+    </div>
+  </header>
+
+  <main>
+    <div class="landing-hero">
+      <p class="landing-eyebrow">Redaktionsarchiv · Berlin · Geheimakten 1949–1990</p>
+      <h1 class="landing-title">Geheimnisse der <span>DDR</span></h1>
+      <p class="landing-subtitle">Das Leben im zweiten Deutschland – ein digitaler Escape Room</p>
+    </div>
+
+    <div class="landing-intro" style="padding: 0 1.5rem;">
+      <p>
+        Im Keller eines Berliner Zeitungsarchivs wurden 2024 sieben versiegelte Aktenordner entdeckt.
+        Sie enthalten Dokumente, Berichte und Zeitzeugnisse aus den Jahren 1949 bis 1990 –
+        aus einer Zeit, als Deutschland in zwei Staaten geteilt war: die Bundesrepublik Deutschland (BRD)
+        im Westen und die Deutsche Demokratische Republik (DDR) im Osten.
+      </p>
+      <p>
+        Die Akten geben Einblicke in den Alltag der DDR-Bürgerinnen und -Bürger:
+        Wie lebten sie? Wie wurde ihre Gesellschaft kontrolliert? Was durften sie sagen –
+        und was nicht? Und wie unterschied sich dieses Leben vom Westen?
+      </p>
+      <p>
+        Deine Aufgabe: Analysiere die Dokumente, löse die Rätsel in jeder Akte
+        und erschließe das Code-Wort, das die nächste Akte öffnet. Sieben Akten warten auf dich.
+      </p>
+
+      <hr class="landing-divider">
+
+      <div class="vorwissens-block">
+        <p class="vorwissens-intro">Bevor du startest – aktiviere dein Vorwissen:</p>
+        <ol class="vorwissens-questions">
+          <li>Was weißt du bereits über die DDR und die Teilung Deutschlands?</li>
+          <li>Was fällt dir spontan zum Begriff „Berliner Mauer" ein?</li>
+          <li>Was möchtest du nach diesem Escape Room besser verstanden haben?</li>
+        </ol>
+      </div>
+
+      <div class="cta-buttons">
+        <button class="start-btn">Mission beginnen →</button>
+        <button class="anleitung-btn" onclick="openAnleitung()">📋 Anleitung</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ANLEITUNG-MODAL -->
+  <div class="anleitung-overlay" id="anleitung-overlay" onclick="if(event.target===this)closeAnleitung()">
+    <div class="anleitung-modal">
+      <button class="anleitung-close" onclick="closeAnleitung()" aria-label="Schließen">✕</button>
+      <h2>📋 So funktioniert der Escape Room</h2>
+
+      <h3>Was dich erwartet</h3>
+      <p>
+        Du arbeitest dich durch 7 Akten zu verschiedenen Themen der DDR. Jede Akte enthält
+        historische Dokumente, die du analysierst, und 5 Aufgaben, die du löst.
+      </p>
+
+      <h3>So funktioniert das Spiel</h3>
+      <ol>
+        <li>Lies das historische Dokument in jeder Akte sorgfältig durch.</li>
+        <li>Löse die 5 Aufgaben in der richtigen Reihenfolge.</li>
+        <li>Nach Aufgabe 5 erscheint die Code-Eingabe.</li>
+        <li>Das Code-Wort findest du <strong>fett hervorgehoben</strong> im Text der Akte.</li>
+        <li>Gib das Code-Wort ein (Groß-/Kleinschreibung ist egal).</li>
+        <li>Die nächste Akte wird freigeschaltet!</li>
+      </ol>
+
+      <h3>Aufgabentypen</h3>
+      <ul>
+        <li><strong>Multiple Choice:</strong> Wähle die eine richtige Antwort aus.</li>
+        <li><strong>Richtig/Falsch:</strong> Ordne jede Aussage korrekt ein.</li>
+        <li><strong>Mehrfachauswahl:</strong> Wähle alle richtigen Antworten.</li>
+        <li><strong>Zuordnung:</strong> Ordne Begriffe und Definitionen einander zu.</li>
+        <li><strong>Sortierung:</strong> Bringe Ereignisse in die richtige Reihenfolge.</li>
+      </ul>
+
+      <h3>Schwierigkeitsgrade</h3>
+      <ul>
+        <li><strong>★☆☆ Einfach:</strong> Direkt aus dem Text ablesbar.</li>
+        <li><strong>★★☆ Mittel:</strong> Erfordert eine Schlussfolgerung.</li>
+        <li><strong>★★★ Schwer:</strong> Erfordert eigenes Urteil und Vernetzung.</li>
+      </ul>
+
+      <h3>Tipps</h3>
+      <p>
+        Bei schwierigen Aufgaben (★★★) findest du ein zweistufiges Tipp-System.
+        Der erste Tipp weist in die richtige Richtung, der zweite verrät fast die Antwort.
+      </p>
+
+      <h3>Fortschritt</h3>
+      <p>
+        Dein Fortschritt wird automatisch in deinem Browser gespeichert.
+        Du kannst jederzeit aufhören und später weitermachen – auf demselben Gerät.
+      </p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    Erstellt mit Liebe &#10084;&#65039; und <a href="https://claude.ai/claude-code" target="_blank" rel="noopener">Claude Code</a> von Jonas Engeler
+    <span class="footer-sep">|</span>
+    <a href="impressum.html">Impressum</a>
+    <span class="footer-sep">|</span>
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+  <script>
+    initLandingPage();
+  </script>
+</body>
+</html>
